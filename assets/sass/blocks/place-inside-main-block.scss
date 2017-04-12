@@ -1,0 +1,181 @@
+.place-inside-main-block {
+  width: 100%;
+  display: block;
+  vertical-align: top;
+  height: calc(100vh - 74px);
+  position: relative;
+  overflow: hidden;
+  background-color: $black;
+  padding: 40px 0;
+  min-height: 770px;
+  background-size: cover;
+  background-position: center;
+
+  .place-inside-main-block__background {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 110%;
+    height: auto;
+  }
+
+  .place-inside-main-block__search {
+    position: relative;
+    width: 100%;
+
+    .place-inside-main-block__search-form-wrapper {
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      margin-bottom: 20px;
+
+      .place-inside-main-block__search-field {
+        display: block;
+        border: none;
+        font: 400 18px $fontFamily;
+        background-color: transparent;
+        color: $white;
+        margin: 0;
+        width: 100%;
+        background-image: url(../images/search-shape.png), url(../images/search-shape-two.svg);
+        background-repeat: no-repeat;
+        background-position: 15px center, right 15px center;
+        padding: 13px 50px 13px 48px;
+
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .place-inside-main-block__search-button {
+        display: block;
+        font: 600 17px $fontFamily;
+        color: $white;
+        padding: 15px 25px;
+      }
+    }
+
+
+
+    .place-inside-main-block__bread-crumbs-note {
+      font: 400 13px $fontFamily;
+      color: $white;
+      opacity: 0.6;
+      letter-spacing: 1.28px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    .place-inside-main-block__bread-crumbs-link {
+      font: 400 13px $fontFamily;
+      color: $white;
+      letter-spacing: 1.28px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    .place-inside-main-block__search-additional-button {
+      display: inline-block;
+      font: 400 15px $fontFamily;
+      color: $white;
+      padding: 6px 15px 8px 47px;
+      background-size: 18px;
+      background-image: url(../images/selection-like-disabled.png);
+      background-repeat: no-repeat;
+      background-position: left 15px center;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.place-inside-main-block__search-additional-button_share {
+        background-image: url(../images/share-bg.png);
+      }
+    }
+  }
+
+  .place-inside-main-block__general-info {
+    position: relative;
+    width: 605px;
+    height: 323px;
+
+    .place-inside-main-block__specialization {
+      font: 400 18px $fontFamily;
+      color: $white;
+      opacity: 0.7;
+      display: inline-block;
+    }
+
+    .place-inside-main-block__work-hours {
+      display: inline-block;
+      font: 400 15px $fontFamily;
+      color: $white;
+      margin-left: 15px;
+
+      &:before {
+        content: '\f017';
+        display: inline-block;
+        font: 400 16px 'FontAwesome';
+        margin-right: 15px;
+
+      }
+    }
+
+    .place-inside-main-block__name {
+      font: 700 60px $fontFamily;
+      color: $white;
+      display: inline-block;
+
+      .label {
+        display: inline-block;
+        position: relative;
+        top: none;
+        left: none;
+      }
+    }
+
+    .place-inside-main-block__location {
+      font: 400 16px $fontFamily;
+      color: $white;
+      border-bottom: 1px dashed $white;
+      display: inline-block;
+      position: relative;
+      margin: 0px 20px 20px 30px;
+      padding-bottom: 3px;
+
+
+      &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 30px;
+        height: 25px;
+        margin-left: -30px;
+        background: url(../images/orange-pin.svg);
+        background-repeat: no-repeat;
+
+      }
+    }
+
+    .metro {
+      font: 400 14px $fontFamily;
+    }
+
+  }
+
+  .calendar-wrap {
+    width: 350px;
+
+    .time_wrapper {
+      height: 100px;
+      overflow: hidden;
+      transition: 0.2s;
+    }
+  }
+}

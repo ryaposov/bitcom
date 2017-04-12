@@ -1,0 +1,126 @@
+/* COMMON */
+
+// Flex
+
+%fl {
+  @include flexbox;
+  @include flex-wrap(wrap);
+}
+
+%fl-in {
+  @include inline-flex;
+  @include flex-wrap(wrap);
+}
+
+// Flex-direction
+
+%fl-di-row {
+  @include flex-direction(row);
+}
+
+%fl-di-col {
+  @include flex-direction(column);
+}
+
+// Flex-wrap
+
+%fl-fw-nw {
+  @include flex-wrap(nowrap);
+}
+
+%fl-fw-wr {
+  @include flex-wrap(wrap);
+}
+
+// Align-content
+
+%fl-ac-fs {
+  @include align-content(flex-start);
+}
+
+%fl-ac-fe {
+  @include align-content(flex-end);
+}
+
+%fl-ac-sb {
+  @include align-content(space-between);
+}
+
+%fl-ac-c {
+  @include align-content(center);
+}
+
+// Justify-content
+
+%fl-jc-fs {
+  @include justify-content(flex-start);
+}
+
+%fl-jc-fe {
+  @include justify-content(flex-end);
+}
+
+%fl-jc-sb {
+  @include justify-content(space-between);
+}
+
+%fl-jc-c {
+  @include justify-content(center);
+}
+
+// Align-items
+
+%fl-ai-fs {
+  @include align-items(flex-start);
+}
+
+%fl-ai-fe {
+  @include align-items(flex-end);
+}
+
+%fl-ai-c {
+  @include align-items(center);
+}
+
+%fl-ai-b {
+  @include align-items(baseline);
+}
+
+%fl-ai-s {
+  @include align-items(stretch);
+}
+
+// Align-self
+
+%fl-as-fs {
+  @include align-self(flex-start);
+}
+
+%fl-as-fe {
+  @include align-self(flex-end);
+}
+
+%fl-as-c {
+  @include align-self(center);
+}
+
+%fl-as-b {
+  @include align-self(baseline);
+}
+
+%fl-as-s {
+  @include align-self(stretch);
+}
+
+// Samples
+
+%fl-dt {
+	@extend %fl, %fl-jc-sb, %fl-ai-fs;
+}
+
+// Shadow
+
+%shadow {
+	@include box-shadow(0, 0, 2px, 0, rgba(0,0,0,0.05));
+	border-radius: 1px;
+}

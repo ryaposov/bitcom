@@ -1,0 +1,104 @@
+.footer {
+
+  .footer__logo-name {
+    margin: 21px 0 26px 0;
+    float: left;
+
+    .footer__logo {
+      img {
+        width: 195px;
+        height: auto;
+      }
+    }
+
+    .footer__name {
+      display: inline-block;
+      color: $black;
+      font: 900 19px $fontFamily;
+      letter-spacing: 2px;
+    }
+  }
+
+  .footer__city{
+    display: inline-block;
+    margin-left: 73px;
+
+    .city {
+      margin-left: 0;
+    }
+  }
+
+  .footer__add-place-button {
+    @include css3-prefix('transition', '0.2s');
+    margin-top: 26px;
+    display: inline-block;
+    color: $white;
+    font: 500 16px $fontFamily;
+    padding: 13px 20px 15px 20px;
+    background: $red;
+
+    &:hover {
+      @include css3-prefix('transition', '0.2s');
+      background: darken($red, 15%);
+    }
+  }
+
+  .download-app-link {
+    display: block;
+    margin-bottom: 13px;
+  }
+
+  .footer__download-app-note {
+    font: 400 16px $fontFamily;
+    color: $black2;
+    margin-bottom: 21px;
+
+    .footer__download-app-note-bold {
+      color: $black;
+      font: 600 16px $fontFamily;
+    }
+  }
+
+  .copyright {
+    padding: 21.5px 0 25px 0;
+    border-top: 1px solid $mediumgray;
+
+    .copyright__note {
+      display: inline-block;
+      color: $black3;
+      font: 400 13px $fontFamily;
+      margin-right: 124px;
+    }
+
+    .copyright__link {
+      display: inline-block;
+      color: $black3;
+      font: 400 13px $fontFamily;
+      margin-right: 57px;
+    }
+  }
+}
+
+.footer__content {
+  padding-bottom: 40px;
+
+  .footer__menu {
+    display: inline-block;
+
+    .footer__menu-item {
+      display: inline-block;
+      color: $black3;
+      font: 400 14px $fontFamily;
+      margin-bottom: 10px;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &.active {
+        color: $black;
+        font: 600 16px $fontFamily;
+      }
+    }
+  }
+}

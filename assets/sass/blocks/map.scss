@@ -1,0 +1,403 @@
+// Main
+
+.map {
+  height: calc(100vh - 74px);
+  width: 100%;
+  text-align: left;
+  min-height: calc(100vh -- 74px);
+  overflow: hidden;
+  position: relative;
+
+  > .center {
+    @extend %fl-dt;
+    padding-top: 60px;
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  .map__left {
+    width: 35%;
+    font-size: 0;
+    white-space: nowrap;
+    pointer-events: all;
+
+    > * {
+      display: inline-block;
+      vertical-align: top;
+      pointer-events: all;
+    }
+
+    &.map__left_place {
+      .map__search {
+        margin-left: -100%;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .map__place {
+        pointer-events: all;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  .map__search {
+    @extend %tr200;
+    position: relative;
+    width: 100%;
+
+    .map__search-input,
+    .map__results {
+      background: #fff;
+      box-shadow: 0 2px 15px 0 rgba(0,0,0,0.20);
+      border-radius: 2px;
+    }
+
+    .map__search-input {
+      margin-bottom: 20px;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 19px;
+        height: 19px;
+        background-image: url(../images/search-loupe.svg);
+        background-size: cover;
+        position: absolute;
+        top: 15px;
+        left: 17px;
+      }
+
+      input {
+        @extend %appearence;
+        font-size: 17px;
+        padding: 15px 50px 16px;
+        width: 100%;
+      }
+
+      .map__filters-icon {
+        @extend %tr200;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        background-image: url(../images/search-filter.svg);
+        background-size: cover;
+        width: 22px;
+        height: 20px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: .6;
+        }
+      }
+    }
+
+    .map__results {
+      padding: 20px 0;
+
+      .map__results-list {
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 50vh;
+        max-height: calc(100vh - 60px - 71px - 36px - 40px - 60px - 74px);
+
+        &:empty {
+          + .map__results-empty {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+            height: auto;
+            margin-top: 30px;
+          }
+        }
+
+        .map__item:last-child {
+          padding-bottom: 0;
+          border-bottom: 0;
+          margin-bottom: 0;
+        }
+      }
+
+      .map__results-empty {
+        @extend %tr200;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        text-align: center;
+        height: 0;
+
+        &:active {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+          height: auto;
+          margin-top: 30px;
+        }
+
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 60px;
+          height: 63px;
+          background-image: url(../images/search-loupe.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        span {
+          color: $gray3;
+          display: block;
+          margin-top: 15px;
+        }
+      }
+
+      .map__results-header {
+        font-size: 13px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $gray8;
+        margin-bottom: 20px;
+        display: block;
+        padding: 0 20px;
+      }
+    }
+  }
+
+  .map__item {
+    width: 100%;
+    padding: 0 20px 13px 20px;
+    border-bottom: 1px solid rgba(#000, .05);
+    margin-bottom: 16px;
+    margin-top: 0;
+
+    .map__item-image {
+      height: 100px;
+      width: 100%;
+      position: relative;
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+
+    &:hover {
+      .map__item-header {
+        opacity: .6;
+      }
+    }
+
+    .map__item-header {
+      @extend %tr200;
+
+      &:hover {
+        color: $red;
+        opacity: 1;
+      }
+    }
+
+    .map__item-top {
+      @extend %fl-dt, %fl-ai-fs;
+    }
+
+    .map__item-bottom {
+      @extend %fl-dt, %fl-ai-b;
+      margin-top: 15px;
+
+      .place-attributes__middle-check {
+        margin: 0;
+      }
+    }
+  }
+
+  .map__place {
+    @extend %tr200;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 15px 0 rgba(0,0,0,0.20);
+    border-radius: 2px;
+    padding: 0;
+    font-size: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    overflow-y: scroll;
+    max-height: calc(100vh - 74px - 120px);
+
+    > * {
+      white-space: normal;
+    }
+
+    .map__place-close {
+      width: 21px;
+      height: 21px;
+      background-image: url(../images/modal-close.svg);
+      background-size: cover;
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .map__place-back {
+      @extend %tr200;
+      font-size: 13px;
+      padding: 3px 15px 6px;
+      background: #fff;
+      border-radius: 30px;
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+
+      i {
+        position: relative;
+        top: 1px;
+        margin-right: 5px;
+      }
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+
+    .map__item-image {
+      width: 100%;
+      position: relative;
+      height: 230px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+
+    .place-attributes {
+      padding: 20px 20px 20px;
+    }
+
+    .map__item-full {
+      display: block;
+      background: $green3;
+      color: #fff;
+      border-radius: 2px;
+      padding: 6px 0 10px;
+      text-align: center;
+      margin: 0 20px 0;
+    }
+
+    .map__item-description {
+      padding: 20px;
+      border-top: 1px solid rgba(#000, .05);
+      border-bottom: 1px solid rgba(#000, .05);
+    }
+
+    .map__item-time {
+      border-top: 1px solid rgba(#000, .05);
+      padding: 20px 20px 0;
+    }
+
+    .map__item-time-more {
+      display: block;
+      cursor: pointer;
+      text-align: center;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      width: 100%;
+      padding: 10px 0;
+      background-color: rgba(205, 205, 205, .3);
+      color: #000;
+      font: 400 15px Exo2, sans-serif;
+      margin-top: 5px;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 12px;
+        height: 8px;
+        background-image: url(../images/arrow-right.png);
+        margin-left: 10px
+      }
+    }
+  }
+
+  input#map__filters-state:checked {
+    & + .center {
+      .map__filters-icon {
+        opacity: .3;
+      }
+
+      .map__left + .map__filters {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .map__left.map__left_place + .map__filters {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .map__filters {
+    @extend %tr200;
+    pointer-events: all;
+    width: 62%;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    .map__filters-list {
+      @extend %fl;
+      // background: #fff;
+      // box-shadow: 0 2px 15px 0 rgba(0,0,0,0.20);
+      // border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .map__filters-single,
+    .select2-container {
+      @extend %appearence;
+      background: #fff;
+      margin: 0;
+      font-size: 15px;
+      width: 20%;
+
+      position: relative;
+      background-image: url(../images/filter-arrow.svg);
+      background-position: top 23px right 10px;
+      background-repeat: no-repeat;
+      margin: 0 10px 10px 0;
+      box-shadow: 0 2px 15px 0 rgba(0,0,0,0.20);
+      border-radius: 2px;
+
+      &.select2-container--focus {
+        .select2-selection {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

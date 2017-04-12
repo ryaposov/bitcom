@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="13px" viewBox="0 0 8 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Direction</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="13" font-family="FontAwesome" font-weight="normal">
+        <g id="institution" transform="translate(-252.000000, -299.000000)" fill="#46A655">
+            <g id="Rating" transform="translate(205.000000, 294.000000)">
+                <g id="Direction" transform="translate(46.000000, 0.000000)">
+                    <text id="3">
+                        <tspan x="0.894670759" y="11.5"></tspan>
+                    </text>
+                    <text id="2" opacity="0.599999964">
+                        <tspan x="0.891435896" y="15.1948242"></tspan>
+                    </text>
+                    <text id="1" opacity="0.349999994">
+                        <tspan x="0.891435896" y="18.7000122"></tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+/*
+Author:
+*/
+
+$url_path: '..';
+
+//Mixins
+@import 'source/mixins';
+
+// Reset
+@import 'source/normalize';
+
+// Common parts
+@import 'source/fonts';
+@import 'source/general';
+@import 'source/placeholders';
+
+// Screens
+@import 'source/bitcom_style';
+
+@import 'blocks/*';

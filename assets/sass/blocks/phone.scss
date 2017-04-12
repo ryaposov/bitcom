@@ -1,0 +1,39 @@
+.phone {
+  display: inline-block;
+  margin-right: 70px;
+  min-width: 200px;
+
+  .phone__phone-number {
+    font: 600 17px $fontFamily;
+    color: $black3;
+    margin-bottom: 3px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background-image: url(../images/phone.png);
+      margin-right: 15px;
+    }
+
+    &.phone__phone-number_email {
+      &:before {
+        content: "\f003";
+        background-image: none;
+        font-size: 18px;
+        font-family: 'FontAwesome';
+        color: #B9C6CF;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  .phone__phone-note {
+    font: 300 12px $fontFamily;
+    color: $gray2;
+    margin-left: 33px;
+  }
+
+}

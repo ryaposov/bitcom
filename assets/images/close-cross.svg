@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>close-cross</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Selection" transform="translate(-403.000000, -930.000000)" fill="#FFFFFF">
+            <g id="selected-filters" transform="translate(270.000000, 919.000000)">
+                <g id="filter-now">
+                    <g id="close" transform="translate(133.000000, 11.000000)">
+                        <g id="Layer_1">
+                            <polygon id="close-cross" points="11.9751613 0.684290323 11.2909032 0 5.98758065 5.30329032 0.684290323 0 0 0.684290323 5.30329032 5.98758065 0 11.2909032 0.684290323 11.9751613 5.98758065 6.67187097 11.2909032 11.9751613 11.9751613 11.2909032 6.67187097 5.98758065"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

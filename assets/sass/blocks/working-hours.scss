@@ -1,0 +1,56 @@
+.working-hours {
+  @extend %fl-dt;
+
+  .working-hours__schedule {
+    width: 26%;
+  }
+
+
+  .ordinary-note {
+    width: 67%;
+    margin-right: 70px;
+  }
+
+  .working-hours__schedule-header {
+    display: inline-block;
+    width: 100%;
+    font: 400 13px $fontFamily;
+    color: $darkgray;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  .working-hours__schedule-item-wrap {
+    @extend %fl-dt;
+
+    > div {
+      width: 46%;
+
+      > *:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .working-hours__schedule-item {
+    display: inline-block;
+    font: 500 13px $fontFamily;
+    color: $gray7;
+    margin-bottom: 10px;
+
+    .working-hours__schedule-hours {
+      margin-left: 18px;
+    }
+
+    &.working-hours__schedule-item_red-dot:before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: $red;
+      margin-left: -16px;
+      margin-right: 10px;
+    }
+  }
+}

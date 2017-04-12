@@ -1,0 +1,92 @@
+.bitcom-app {
+  width: 100%;
+  height: 550px;
+  position: relative;
+
+  // &:hover {
+  //   .bitcom-app__background {
+  //     transform: scale(1.01);
+  //   }
+  // }
+
+  .bitcom-app__content-section {
+    width: 100%;
+
+    .bitcom-app__background {
+      @extend %tr200;
+      width: 100%;
+      height: 424px;
+      position: absolute;
+      left: 0;
+      top: 63px;
+      background-color: $black;
+      z-index: 0;
+      background-image: url(../images/bitcom-app-bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+     > .center {
+      position: relative;
+    }
+
+    .bitcom-app__content-wrap {
+      @include css3-prefix('flex-direction', 'column');
+      padding: 20px 0;
+      width: 500px;
+      height: 360px;
+
+      .bitcom-app__header {
+        color: $white;
+        font: 400 40px $fontFamily;
+      }
+
+      .bitcom-app__subheader {
+        color: $white;
+        font: 200 30px $fontFamily;
+      }
+
+      .bitcom-app__additional-info {
+        color: $white;
+        font: 400 18px/26px $fontFamily;
+
+        &:before {
+          content: '';
+          display: block;
+          float: left;
+          margin-right: 30px;
+          width: 19px;
+          height: 40px;
+          background: url(../images/bitcom-app-additional-lines.svg);
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+  }
+
+
+  .bitcom-app__image-wrap {
+    display: block;
+    float: right;
+
+    .center {
+      height: 100%;
+
+      .bitcom-app__image {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.download-app-link {
+  @extend %tr200;
+  display: inline-block;
+  margin-right: 22px;
+
+  &:hover {
+    opacity: .6;
+  }
+}

@@ -1,0 +1,72 @@
+.time_wrapper {
+  margin-top: 20px;
+}
+
+.time_wrapper.time_wrapper_row-6 {
+  .time-point {
+    width: 15%;
+    margin-right: 2%;
+
+    &:nth-child(6n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.time_wrapper.time_wrapper_row-4 {
+  .time-point {
+    width: 22%;
+    margin-right: 4%;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.time-point {
+  width: 70px;
+  height: 41px;
+  background-color: $green3;
+  border-radius: 3px;
+  position: relative;
+  margin-bottom: 10px;
+
+  .time-point__time {
+    font: 400 14px $fontFamily;
+    color: $white;
+  }
+
+  &.time-point_with-bonus {
+    padding-bottom: 19px;
+
+    .time-point__bonus-note {
+      @include border-radius-separate(0, 0, 3px, 3px);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 19px;
+      width: 100%;
+      text-align: center;
+      color: $white;
+      font: 400 10px $fontFamily;
+      background-color: darken($green, 4%);
+    }
+  }
+
+  &.time-point_orange {
+    background-color: $orange3;
+
+    .time-point__bonus-note {
+      background-color: darken($orange3, 4%);
+    }
+  }
+
+  &.time-point_red {
+    background-color: $red;
+
+    .time-point__bonus-note {
+      background-color: darken($red, 15%);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="53px" viewBox="0 0 42 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="All-Selections" transform="translate(-698.000000, -3270.000000)" fill="#D8DDDF">
+            <g id="All-selections" transform="translate(168.000000, 1594.000000)">
+                <g id="More" transform="translate(529.000000, 1676.047938)">
+                    <g id="replay-arrow-(1)" transform="translate(1.000000, 0.000000)">
+                        <g id="Capa_1">
+                            <g id="replay">
+                                <path d="M21,10.5940914 L21,0 L7.875,13.2426143 L21,26.4852285 L21,15.8911371 C29.6625,15.8911371 36.75,23.0421488 36.75,31.7822742 C36.75,40.5223997 29.6625,47.6734114 21,47.6734114 C12.3375,47.6734114 5.25,40.5223997 5.25,31.7822742 L0,31.7822742 C0,43.4357748 9.45,52.9704571 21,52.9704571 C32.55,52.9704571 42,43.4357748 42,31.7822742 C42,20.1287737 32.55,10.5940914 21,10.5940914 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

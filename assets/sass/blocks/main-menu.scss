@@ -1,0 +1,16 @@
+.main-menu {
+  .main-menu__item {
+    @extend %tr200;
+    font: 600 17px $fontFamily;
+    color: $black3;
+    margin-right: 40px;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

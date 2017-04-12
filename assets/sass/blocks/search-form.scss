@@ -1,0 +1,33 @@
+.search-form {
+  width: 100%;
+
+  .search-form__input {
+    width: 100%;
+    font: 400 18px $fontFamily;
+    color: $gray4;
+    padding: 13px 0 13px 48px;
+    border: none;
+    background-image: url(../images/search-shape.png);
+    background-repeat: no-repeat;
+    background-position: 14px center;
+    margin: 20px 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .search-form__find-button {
+    @include css3-prefix('transition', '0.2s');
+    display: inline-block;
+    font: 600 17px $fontFamily;
+    color: $white;
+    padding: 14px 30px;
+    background: $red;
+
+    &:hover {
+      @include css3-prefix('transition', '0.2s');
+      background: darken($red, 15%);
+    }
+  }
+}

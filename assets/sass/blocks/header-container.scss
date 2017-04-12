@@ -1,0 +1,118 @@
+.header-container {
+  width: 100%;
+
+  &.header-container_bottom-line {
+    border-bottom: 1px solid $mediumgray;
+  }
+
+  &.header-container_top-line {
+    border-top: 1px solid $mediumgray;
+    padding-top: 20px;
+  }
+
+  .header-container__header {
+    display: inline-block;
+    color: $black3;
+    font: 500 24px $fontFamily;
+    padding-bottom: 22px;
+    padding-top: 3px;
+
+    &.header-container__header_star:before {
+        content: '';
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+        background: url(../images/gold-star.png);
+        background-size: contain;
+        margin-right: 11px;
+
+    }
+
+    &.header-container__header_big-font {
+      font-size: 32px;
+    }
+
+  }
+
+  .header-container__links {
+    display: inline-block;
+
+    .header-container__link-item {
+      display: inline-block;
+      margin-right: 46px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:first-child {
+        margin-left: 66px;
+      }
+
+      .header-container__link {
+        display: inline-block;
+        color: $black3;
+        font: 400 16px $fontFamily;
+        cursor: pointer;
+        padding-bottom: 22px;
+        padding-top: 10px;
+
+        &:hover {
+          color: $red;
+        }
+
+        &.header-container__link_active {
+          border-bottom: 2px solid $red;
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+
+// Modificators
+
+.header-container {
+
+  &.header-container_content-page {
+    margin-top: -20px;
+    padding: 82px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: #000;
+
+    div,
+    ul {
+      width: 100%;
+    }
+
+     .header-container__header {
+       font-size: 46px;
+       letter-spacing: -.77;
+       font-weight: 600;
+       color: #fff;
+       width: 100%;
+       padding: 0;
+       text-align: center;
+       margin-top: 10px;
+     }
+
+     .breadcrumbs_banner {
+       li {
+         display: inline-block;
+         text-transform: uppercase;
+         color: $orange;
+         letter-spacing: .2;
+         font-size: 18px;
+         margin: 0 5px;
+
+         a {
+           color: $orange;
+         }
+       }
+     }
+  }
+}

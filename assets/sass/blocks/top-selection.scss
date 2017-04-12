@@ -1,0 +1,37 @@
+.top-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+
+  &:hover {
+    .top-section__content-wrap {
+      background-size: 110% auto;
+    }
+  }
+
+  .top-section__content-wrap {
+    @extend %tr200;
+    background-image: url(../images/top-section-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    width: 100%;
+    padding: 33px 0;
+
+
+    .top-section__top-note {
+      position: relative;
+      display: inline-block;
+      background-color: $red;
+      color: $white;
+      font: 700 17px $fontFamily;
+      padding: 7px 17px 8px 17px;
+      margin-bottom: 11px;
+    }
+
+    .top-section__header {
+      font: 600 29px $fontFamily;
+      color: $white;
+    }
+  }
+}

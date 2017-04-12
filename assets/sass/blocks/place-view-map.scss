@@ -1,0 +1,40 @@
+.place-on-map {
+  width: 100%;
+  background-color: $gray;
+  padding: 30px 0;
+  position: relative;
+
+  .center {
+    position: relative;
+    pointer-events: none;
+  }
+
+  .place {
+    margin: 0;
+    //position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: all;
+    @include box-shadow('0px', '2px', '15px', 'rgba(0,0,0,.2)');
+
+    .place-attributes { 
+        padding: 0 15px 15px;
+    }
+
+    .reserve-button {
+      background-color: $red;
+      text-align: center;
+      display: inline-block;
+      color: $white;
+      font: 600 16px $fontFamily;
+      padding: 10px 0;
+      margin-top: 8px;
+    }
+  }
+}
+
+.place-view-map {
+  .header-container {
+    padding: 40px 0 20px;
+  }
+}

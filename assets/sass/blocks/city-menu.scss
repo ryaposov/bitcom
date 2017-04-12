@@ -1,0 +1,31 @@
+.city-menu {
+  position: relative;
+
+  .city-menu__hidden {
+    display: block;
+    position: absolute;
+    left: -10000px;
+    padding: 10px;
+
+    .city-menu__hidden-item {
+      display: inline-block;
+      color: $black2;
+      font: 300 15px $fontFamily;
+      margin-top: 15px;
+      width: 100%;
+      padding: 8px;
+
+      &:hover {
+        background-color: $lightgray;
+      }
+    }
+  }
+
+  #city-switcher:checked {
+    & ~ .city-menu__hidden {
+      left: 25px;
+      width: 175px;
+      background: $white;
+    }
+  }
+}

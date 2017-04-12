@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="24px" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>circle-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Selection" transform="translate(-476.000000, -2249.000000)" fill="#F04141">
+            <g id="button" transform="translate(448.000000, 2234.000000)">
+                <path d="M37.5187022,19.802 L37.5187022,15 L31.5695133,21.0025001 L37.5187022,27.0050001 L37.5187022,22.2030001 C41.4451668,22.2030001 44.6577288,25.4443501 44.6577288,29.4060001 C44.6577288,33.3676502 41.4451668,36.6090002 37.5187022,36.6090002 C33.5922375,36.6090002 30.3796755,33.3676502 30.3796755,29.4060001 L28,29.4060001 C28,34.6882002 32.283416,39.0100002 37.5187022,39.0100002 C42.7539884,39.0100002 47.0374043,34.6882002 47.0374043,29.4060001 C47.0374043,24.1238001 42.7539884,19.802 37.5187022,19.802 Z" id="circle-arrow"></path>
+            </g>
+        </g>
+    </g>
+</svg>

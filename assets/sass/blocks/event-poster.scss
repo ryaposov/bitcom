@@ -1,0 +1,72 @@
+.events-poster {
+  width: 204px;
+
+  &:hover {
+    .events-poster__image-block:before {
+      background-color: rgba(#000, .2);
+    }
+  }
+
+  .events-poster__image-block {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background: $black;
+
+    &:before {
+      @extend %tr200;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, .02);
+      z-index: 1;
+    }
+
+    > * {
+      z-index: 1;
+    }
+
+    .events-poster__image {
+      display: block;
+      position: absolute;
+      margin: auto !important;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 200px;
+      z-index: 0;
+    }
+  }
+
+  .selection__like {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+
+  .events-poster__header {
+    display: inline-block;
+    color: $black3;
+    font: 500 20px $fontFamily;
+    margin-top: 12px;
+  }
+
+  .events-poster__subheader {
+    color: $black;
+    font: 300 14px $fontFamily;
+    margin-bottom: 14px;
+  }
+
+  .events-poster__type {
+    color: $gray5;
+    font: 400 13px $fontFamily;
+    margin-bottom: 6px;
+  }
+}

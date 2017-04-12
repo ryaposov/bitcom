@@ -1,0 +1,348 @@
+// !VARIABLES ----------------------------------------------------------------
+
+$fontFamily:  'Exo 2', sans-serif;
+$fontSize:    15px;
+
+$blue:        #00AAFF;
+$transwhite:  rgba(255, 255, 255, 0.5);
+$orange:      #F9B476;
+$orange2:     #F0A640;
+$orange3:     #F09214;
+$darkBlue:    #0077B2;
+$black:       #000;
+$black2:      #232323;
+$black3:      #424242;
+$black4:      #393939;
+$transblack:  rgba($black, .6);
+$highttransblack: rgba($black, .35);
+$white:       #fff;
+$gray:        #B9C6CF;
+$gray2:				#767676;
+$gray3:				#CAD4D8;
+$gray4:       #737373;
+$gray5:       #7F7F7F;
+$gray6:       #ADB6B9;
+$gray7:       #868D97;
+$gray8:       #A4AAB3;
+$gray9:       #EEEEEE;
+$darkgray:    #515151;
+$mediumgray:	#EBEDEE;
+$pregray:			#808080;
+$pregray2:		#F3F3F3;
+$pregray3:		rgba($black, .02);
+$pregray4:    rgba(#CDCDCD, .3);
+$lightgray:		#F5F5F5;
+$red:         #F04141;
+$red2:        #EF4141;
+$red3:        #D0021B;
+$green: 			#29C600;
+$green2:      #6FC920;
+$green3:      #3FD154;
+$green4:      #11AE28;
+$green5:      #4CBC5D;
+$transgreen:  rgba(76, 188, 93, .4);
+$gold:        #FFF6D6;
+$darkgold:    #D6C897;
+
+// NEW VARS
+
+$blue:      #00AAFF;
+$orange:    #FF9400;
+$bggray: 		#F9F9F9;
+$textgray: 	#7E7E7E;
+
+$maxWidth:    1140px;
+$minWidth:    1060px;
+
+// !GENERALS ----------------------------------------------------------------
+
+.appearence,
+%appearence {
+  @include appearance(none);
+}
+
+%br2 {
+  @include border-radius(2px);
+}
+
+%br3 {
+  @include border-radius(3px);
+}
+
+%br5 {
+  @include border-radius(5px);
+}
+
+%br100 {
+  @include border-radius(100%);
+}
+
+%tr200 {
+  @include transition(all .2s ease-in-out);
+}
+
+%tr300 {
+  @include transition(all .3s ease-in-out);
+}
+
+%tr500 {
+  @include transition(all .5s ease-in-out);
+}
+
+.fl, %fl {
+  @include flexbox;
+  @include flex-wrap(wrap);
+}
+
+%fl-ali-c, .fl-ai-c {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include align-items(center);
+}
+
+.fl-ai-cnt {
+  @include align-items(center);
+}
+
+.fl-ai-fe {
+  @include align-items(flex-end);
+
+}
+
+.fl-ai-fs {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include align-items(flex-start);
+}
+
+
+%fl-alc-c, .fl-alc-c {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include align-content(center);
+}
+
+%fl-in, .fl-in {
+  @include inline-flex;
+  @include flex-wrap(wrap);
+}
+
+%fl-in-di, .fl-in-di {
+  @include inline-flex;
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+}
+
+%fl-js-cnt, .fl-js-cnt {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+}
+
+.fl-it-cnt, %fl-it-cnt {
+  @include align-items(center);
+}
+
+.fl-jc-r, %fl-jc-r {
+  @include justify-content(flex-end);
+}
+
+.fl-jc-c, %fl-jc-c {
+  @include justify-content(center);
+}
+
+%fl-ac-sb {
+  @include align-content(space-between);
+}
+
+%fl-ac-c {
+  @include align-content(center);
+}
+
+%to {
+  @include transform-origin(center);
+}
+
+.fl-dr-col {
+  @include css3-prefix('flex-direction', 'column');
+}
+
+.nwr, %nwr {
+	@include flex-wrap(nowrap);
+}
+
+%abs-center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.abs-link,
+%abs-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.padd-rig-50 {
+  padding-right: 50px;
+}
+
+.dn, %dn {
+  display: none;
+}
+
+%bf {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+%us {
+  @include user-select(none);
+}
+
+%shadow {
+  @include box-shadow(0px, 1px, 4px, 0px, rgba(0,0,0,0.09));
+}
+
+@include keyframes(bounce) {
+  0% {
+    @include transform(scale(1.0));
+    color: $red;
+  }
+
+  45% {
+    @include transform(scale(1.3));
+    color: darken($red, 10%);
+  }
+
+  70% {
+    @include transform(scale(0.9));
+  }
+
+  85% {
+    @include transform(scale(1.1));
+  }
+
+  100% {
+    @include transform(scale(1.0));
+  }
+};
+
+@include keyframes(fade-in-out) {
+  0% {
+    right: -140px;
+    opacity: 0;
+  }
+
+  20% {
+    right: -120px;
+    opacity: 1;
+  }
+
+  80% {
+    right: -120px;
+    opacity: 1;
+  }
+
+  100% {
+    right: -140px;
+    opacity: 0;
+  }
+};
+
+/* David's changrs */
+
+%lb-tail {
+  @include flip(-1);
+  position: absolute;
+  top: 0;
+  right: -7px;
+}
+
+.clear {
+  clear: both;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+* {
+  @include box-sizing(border-box);
+  -webkit-tap-highlight-color: transparent;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+q {
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+textarea,
+select {
+  font-family: $fontFamily;
+  outline: none;
+}
+
+body {
+  font-family: $fontFamily;
+}

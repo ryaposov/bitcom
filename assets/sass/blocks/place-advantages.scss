@@ -1,0 +1,40 @@
+.place-advantages {
+  padding: 40px 0 50px;
+}
+
+.single-advantage {
+  width: 150px;
+
+   > * {
+     display: block;
+     text-align: center;;
+   }
+
+  .single-advantage__icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $mediumgray;
+    margin-bottom: 10px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    .single-advantage__icon {
+      display: block;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .single-advantage__note {
+    font: 500 15px $fontFamily;
+    color: $black;
+    display: block;
+  }
+
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="9px" viewBox="0 0 13 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Metro-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="institution" transform="translate(-78.000000, -348.000000)" fill="#EF4141">
+            <g id="metro" transform="translate(78.000000, 344.000000)">
+                <polygon id="Metro-icon" points="11.6806518 11.415809 8.7504539 4 6.27182762 8.33508725 3.80323627 4 0.863003481 11.415809 0 11.415809 0 12.5397205 4.4354365 12.5397205 4.4354365 11.415809 3.7731315 11.415809 4.41536665 9.56938293 6.27182762 12.6199999 8.1282886 9.56938293 8.77052375 11.415809 8.10821875 11.415809 8.10821875 12.5397205 12.5436552 12.5397205 12.5436552 11.415809"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
