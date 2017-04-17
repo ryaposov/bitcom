@@ -1,0 +1,18 @@
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options -MultiViews
+
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.php$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule ^ index.php [QSA,L]
+
+  SetEnv APP_DSN mongodb://127.0.0.1:27017/ulime_global
+  SetEnv ULIME_LOCAL http://ulime.local:8888
+</IfModule>
