@@ -115,4 +115,19 @@
        }
      }
   }
+
+  &.header-container_left {
+    &,
+    .header-container__header {
+      text-align: left;
+    }
+  }
+
+  &.header-container_noimage {
+    background: $lightgray;
+
+    .header-container__header {
+      color: $black;
+    }
+  }
 }
